@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <div class="text-center">
+      <h1>Login to join The Quiz Show</h1>
+      <router-link to="/signin">
+        <button class="btn btn-success">Sign in</button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -9,8 +14,5 @@
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
 }
 </script>
