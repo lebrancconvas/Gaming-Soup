@@ -29,6 +29,12 @@ const routes = [{
         name: 'Home2',
         component: () =>
             import ('@/views/Home2.vue')
+    },
+    {
+        path: '/gameplay',
+        name: 'Gameplay',
+        component: () =>
+            import ('@/views/Gameplay.vue')
     }
 ]
 
