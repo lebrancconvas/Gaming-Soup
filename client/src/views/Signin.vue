@@ -36,11 +36,20 @@
 </template>
 
 <script>
+import {ref} from 'vue'
 export default {
     name: "Signin",
     setup() {
-        let clicksubmit = () => alert("Please Enter Your Username and/or Password.")
-        return { clicksubmit }
+        let usernamedata = ref("")
+        let passworddata = ref("")
+        let clicksubmit = () => {
+            if(usernamedata.value !== "" && passworddata.value){
+                alert(`Username: ${usernamedata.value}\nPassword: ${passworddata.value}`)
+            } else {
+                alert("Please Enter Your Username and/or Your Password.") 
+            }
+        } 
+        return { clicksubmit, usernamedata, passworddata }
     }
 }
 </script>
