@@ -2,7 +2,7 @@
     <div>
        <h1>Sign in</h1>
        <br><hr><br>
-       <form action="">
+       <form>
             <div class="input-group mb-3" id="username">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Username</span>
@@ -10,6 +10,7 @@
                 <input
                     type="text"
                     class="form-control"
+                    v-model="usernamedata"
                     placeholder="Enter Your Username"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
@@ -23,6 +24,7 @@
                 <input
                     type="password"
                     class="form-control"
+                    v-model="passworddata"
                     placeholder="Enter Your Password"
                     aria-label="Password"
                     aria-describedby="basic-addon1"
@@ -37,8 +39,8 @@
 export default {
     name: "Signin",
     setup() {
-        let clicksubmit = () => alert("Please Enter Username and/or Password !!")
-        return {clicksubmit}
+        let clicksubmit = () => alert("Please Enter Your Username and/or Password.")
+        return { clicksubmit }
     }
 }
 </script>
