@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div class="text-center">
+  <div>
+    <div class="align-middle">
       <h1>Login to join The Quiz Show</h1>
       <router-link to="/signin">
         <button class="btn btn-success">Sign in</button>
