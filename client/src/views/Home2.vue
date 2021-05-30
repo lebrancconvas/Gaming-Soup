@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <div class="align-middle">
+        <h1>Gaming Soup</h1>
+        <br><hr><br>
+        <h2>Hello, Username</h2>
+        <h3>Please Join Our Game</h3>
+        <router-link to="/gamejoin">
+            <button type="button" class="btn btn-primary">Join Game</button>
+        </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+
+export default {
+  name: 'Home2',
+}
+</script>
+
+<style scoped>
+h1 {
+  margin: 20px 0px 0px 0px;
+}
+hr {
+  width: 50%;
+  margin: 0 auto;
+}
+</style>
