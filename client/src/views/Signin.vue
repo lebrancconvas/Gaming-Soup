@@ -32,6 +32,9 @@
             </div>
             <input type="submit" @click="clicksubmit" class="btn btn-primary" value="Submit" />
         </form>
+        <div id="unregistermsg">
+            If you didn't have an account. Please <router-link to="/register">Register</router-link>
+        </div>
         </div>
 </template>
 
@@ -43,7 +46,7 @@ export default {
         let usernamedata = ref("")
         let passworddata = ref("")
         let clicksubmit = () => {
-            if(usernamedata.value !== "" && passworddata.value){
+            if(usernamedata.value !== "" && passworddata.value !== ""){
                 alert(`Username: ${usernamedata.value}\nPassword: ${passworddata.value}`)
             } else {
                 alert("Please Enter Your Username and/or Your Password.") 
@@ -65,5 +68,8 @@ hr {
 #username, #password {
     width: 50%;
     margin: 0 auto;
+}
+#unregistermsg {
+    margin: 10px 0px 0px 0px;
 }
 </style>
