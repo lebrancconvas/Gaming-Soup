@@ -34,6 +34,9 @@ app.listen(PORT, () => {
     console.log(`Port ${PORT} is running.`)
 })
 
+let Users = require('./router/userrouter')
+app.use('/api/user', Users)
+
 app.use((req, res, next) => {
     let err = new Error(`Don't find your path.`)
     err.status = 404
