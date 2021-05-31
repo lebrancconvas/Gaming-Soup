@@ -26,3 +26,11 @@ router.post('/', (req, res) => {
         res.status(200).send(`Add Data Already.`)
     })
 })
+
+//PUT (Update Current Data)
+router.put('/:_id', (req, res) => {
+    Users.findByIdAndUpdate(req.params._id, req.body, (err, data) => {
+        if (err) return res.status(400).send(err)
+        res.status(200).send(`Update Data Already.`)
+    })
+})
