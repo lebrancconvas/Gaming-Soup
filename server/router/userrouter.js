@@ -4,7 +4,15 @@ let Users = require('../model/usermodel')
 
 //GET All
 router.get('/', (req, res) => {
-    Food.find().exec((err, data) => {
+    Users.find().exec((err, data) => {
+        if (err) return res.status(400).send(err)
+        res.status(200).send(data)
+    })
+})
+
+//GET by ID 
+router.get('/:_id', (req, res) => {
+    Users.findById(req.params.id).exec((err, data) => {
         if (err) return res.status(400).send(err)
         res.status(200).send(data)
     })
