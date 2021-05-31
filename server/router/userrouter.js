@@ -21,7 +21,7 @@ router.get('/:_id', (req, res) => {
 //POST (Create New Data)
 router.post('/', (req, res) => {
     let obj = new Users(req.body)
-    odj.save((err, data) => {
+    obj.save((err, data) => {
         if (err) return res.status(400).send(err)
         res.status(200).send(`Add Data Already.`)
     })
