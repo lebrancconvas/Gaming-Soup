@@ -34,3 +34,10 @@ router.put('/:_id', (req, res) => {
         res.status(200).send(`Update Data Already.`)
     })
 })
+
+router.delete('/:_id', (req, res) => {
+    Users.findByIdAndDelete(req.params._id, (err, data) => {
+        if (err) return res.status(400).send(err)
+        res.status(200).send(`Delete Data Already.`)
+    })
+})
