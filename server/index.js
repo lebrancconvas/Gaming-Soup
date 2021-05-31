@@ -5,7 +5,7 @@ let bodyParser = require('body-parser')
 let mongoose = require('mongoose')
 
 //Connect MongoDB Atlas
-let mongo_url = ''
+let mongo_url = 'mongodb+srv://admin:99999@gaming-soup.jibno.mongodb.net/Gaming-Soup?retryWrites=true&w=majority'
 mongoose.Promise = global.Promise
 mongoose.connect(mongo_url, { useNewUrlParser: true }).then(
     () => {
