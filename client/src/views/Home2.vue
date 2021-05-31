@@ -3,7 +3,7 @@
     <div class="align-middle">
         <h1>Gaming Soup</h1>
         <br><hr><br>
-        <h2>Hello, Username</h2>
+        <h2>Hello, {{$store.state.username}}</h2>
         <h3>Please Join Our Game</h3>
         <router-link to="/gameplay">
             <button type="button" class="btn btn-primary">Join Game</button>
