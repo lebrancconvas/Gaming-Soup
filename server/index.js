@@ -3,7 +3,27 @@ let express = require('express')
 let cors = require('cors')
 let bodyParser = require('body-parser')
 let mongoose = require('mongoose')
+
+//Connect MongoDB Atlas
+let mongo_url = ''
+mongoose.Promise = global.Promise
+mongoose.connect(mongo_url, { useNewUrlParser: true }).then(
+    () => {
+        console.log(`[Success] task 2: Connected to the Database.`)
+    },
+    error => {
+        console.log(`[Failed] task 2: ${error}`)
+        process.exit()
+    }
+)
+
 let app = express()
+
+//Add Middleware 
+app.use(cors())
+app.use(bodyParser.urlencoded({ extented: true }))
+app.use(bodyParser.json())
+
 let PORT = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
@@ -12,4 +32,10 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Port ${PORT} is running.`)
+})
+
+app.use((req, res, next) => {
+    let err = new Error(`Don't find your path.`)
+    err.status = 404
+    next(err)
 })
