@@ -58,7 +58,7 @@ export default {
         let confirmpassword = ref("")
         let clicksubmit = () => {
             if(password.value !== confirmpassword.value) {
-                alert("Password can't confirm.")
+                alert("Password Confirm Failed.")
             }
         }
         return {password, confirmpassword, clicksubmit}
