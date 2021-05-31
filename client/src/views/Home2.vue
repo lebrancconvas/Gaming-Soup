@@ -5,7 +5,7 @@
         <br><hr><br>
         <h2>Hello, Username</h2>
         <h3>Please Join Our Game</h3>
-        <router-link to="/gamejoin">
+        <router-link to="/gameplay">
             <button type="button" class="btn btn-primary">Join Game</button>
         </router-link>
     </div>
