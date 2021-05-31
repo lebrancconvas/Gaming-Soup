@@ -2,9 +2,17 @@ import { createStore } from 'vuex'
 
 export default createStore({
     state: {
-        username: "Majin Kaiser"
+        username: "Username 01"
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        change(state, value) {
+            state.username = value
+        }
+    },
+    actions: {
+        changeUsername(context) {
+            context.commit('change', "Username 02")
+        }
+    },
     modules: {}
 })

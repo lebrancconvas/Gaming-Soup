@@ -8,6 +8,7 @@
         <router-link to="/gameplay">
             <button type="button" class="btn btn-primary">Join Game</button>
         </router-link>
+        <button @click="change" type="button" class="btn btn-secondary">Test</button>
     </div>
   </div>
 </template>
@@ -17,6 +18,12 @@
 
 export default {
   name: 'Home2',
+  setup() {
+   let change = () => {
+     this.$store.dispatch('changeUsername')
+   } 
+   return {change}
+  }
 }
 </script>
 
