@@ -1,5 +1,5 @@
 let express = require('express')
-let router = expree.Router()
+let router = express.Router()
 let Users = require('../model/usermodel')
 
 //GET All
