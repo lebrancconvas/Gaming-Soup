@@ -41,3 +41,5 @@ router.delete('/:_id', (req, res) => {
         res.status(200).send(`Delete Data Already.`)
     })
 })
+
+module.exports = router
