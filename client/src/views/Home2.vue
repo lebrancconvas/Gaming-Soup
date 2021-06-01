@@ -14,16 +14,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
+import {useStore} from 'vuex'
 export default {
   name: 'Home2',
   setup() {
-   let change = () => {
-     this.$store.dispatch('changeUsername')
-   } 
-   return {change}
-  }
+    const store = useStore()
+    function change() {
+      store.dispatch('changeUsername')
+    } 
+    return {change}
+}
 }
 </script>
 
