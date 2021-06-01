@@ -12,8 +12,13 @@ export default createStore({
     actions: {
         changeUsername(context) {
             this.state.username = "Username 02"
-            context.commit('change', this.state.username)
+            context.commit('change', this.getters.getUsername)
         }
     },
-    modules: {}
+    modules: {},
+    getters: {
+        getUsername(state) {
+            return state.username
+        }
+    }
 })
