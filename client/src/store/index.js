@@ -1,4 +1,7 @@
 import { createStore } from 'vuex'
+import Axios from 'axios'
+
+let api = 'http://locahost:5000/api/user'
 
 export default createStore({
     state: {
